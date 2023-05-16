@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --font: 'Outfit', sans-serif;
+  /* # Colors */
+
+  /* ## Primary */
+
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+
+  --Very_dark_blue_main_BG: hsl(217, 54%, 11%);
+  --Very_dark_blue_card_BG: hsl(216, 50%, 16%);
+  --Very_dark_blue_line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* CSS reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {    /* Allow percentage-based heights in the application */
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {    /* Improve media defaults */
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {   /* Avoid text overflows */
+  overflow-wrap: break-word;
+}
+
+/* Utilities */
+
+.flex_grp,
+.flex_column,
+body{
+  display: flex;
+}
+
+.flex_column,
+body {
+  flex-direction: column;
+}
+
+/* body styling */
+
+body {
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very_dark_blue_main_BG);
+  font-family: var(--font);
+  color: var(--Soft_blue);
+}
+
+/* card styling */
+
+.card_container {
+  max-width: 300px;
+  background-color: var(--Very_dark_blue_card_BG);
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+.img_container {
+  position: relative;
+  width: 100%;
+}
+
+.main_img {
+  border-radius: .5rem;
+}
+
+.overlay {
+  position: absolute;
+  background-color: var(--Cyan);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.img_container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.icon_view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.img_container:hover .icon_view{
+  display: block;
+  cursor: pointer;
+}
+
+.card_content {
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.card_title {
+  font-size: 1.375rem;
+  color: var(--White);
+}
+
+.price_time {
+  justify-content: space-between;
+}
+
+.price_container {
+  color: var(--Cyan);
+}
+
+.price_container,
+.time_container {
+  gap: .5rem;
+}
+
+.user_container{
+  align-items: center;
+  border-top: 1px solid var(--Very_dark_blue_line);
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 35px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+.user_name{
+  text-decoration: none;
+  color: var(--White);
+}
+
+.card_title:hover,
+.user_name:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
