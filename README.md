@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
-- Live Site URL: (https://your-live-site-url.com)
+- Solution URL: (https://github.com/Medido1/Frontend-Mentor-NFT-preview-card-component)
+- Live Site URL: (https://medido1.github.io/Frontend-Mentor-NFT-preview-card-component/)
 
 ## My process
 
